@@ -1,0 +1,600 @@
+body {
+    font-family: "Sanchez", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto; 
+    color: #404034;
+}
+
+.overall_container_index {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas:
+        "header"
+        "main_image_one"
+        "main"
+        "footer"; 
+}
+
+p, h1, h2, h3 {
+    padding: 0px 20px; 
+}
+
+.header {
+    grid-area: header; 
+    background-color: #B7B7A4;
+    font-weight: 500; 
+    padding: 20px 0px; 
+    position: fixed; 
+}
+
+.header_text {
+    color: white;
+    margin-top: 10px;
+    padding-left: 20px; 
+    font-size: 35px; 
+}
+
+.index_main {
+    grid-area: main; 
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
+    background-color: white; 
+    grid-template-areas:
+        "small_description"
+        "reviews_image"
+        "gallery_title"
+        "gallery"
+        "image_stack_box"
+}
+
+.main_image_one {
+    grid-area: main_image_one; 
+    background-image: url("../images/serendipity_banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px; 
+    margin-bottom: 20px;
+    margin-top: 70px; 
+}
+
+.small_description_box {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.small_description {
+    grid-area: small_description; 
+    color: #3a2e23;
+    padding: 40px; 
+    margin: 10px 28px; 
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+    text-align: center; 
+}
+
+.reviews_image_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews_image {
+    grid-area: reviews_image;
+    padding: 20px 20px; 
+    object-fit: contain; 
+    width: 100%;
+    height: 300px; 
+    border-radius: 15px; 
+    margin: 20px 30px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);  
+}
+
+.gallery_title {
+    grid-area: gallery_title; 
+    margin: 28px; 
+    margin-bottom: 0px; 
+    margin-top: 10px; 
+    padding: 10px; 
+    text-align: center; 
+    background-color: #f0e4da;
+    border-radius: 15px; 
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: #3a2e23;
+    border-bottom: 0px;
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);  
+}
+
+.gallery {
+    grid-area: gallery; 
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin: 28px; 
+    margin-bottom: 20px; 
+    margin-top: 0px; 
+    background-color: #f0e4da; 
+    border-radius: 15px; 
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    box-shadow: 0px 5px 10px rgb(224, 224, 224);  
+}
+
+.gallery img {
+    padding: 10px; 
+    margin: 10px; 
+    height: 200px;
+    width: auto; 
+
+}
+
+.image_stack_box {
+    display: grid; 
+    grid-area: image_stack_box; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas: 
+        "image_stack_one"
+        "image_stack_two"
+        "image_stack_three"; 
+    padding: 20px 30px; 
+    padding-bottom: 10px; 
+}
+
+.image_stack_one {
+    grid-area: image_stack_one; 
+    background-image: url("../images/stack_one.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 200px; 
+    margin-bottom: 20px;
+    border-radius: 15px;     
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);  
+}
+
+.image_stack_two {
+    grid-area: image_stack_two; 
+    background-image: url("../images/stack_two.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px; 
+    margin-bottom: 20px;
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);  
+}
+
+.image_stack_three {
+    grid-area: image_stack_three; 
+    background-image: url("../images/stack_three.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px; 
+    margin-bottom: 20px;
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);  
+}
+
+.image_stack_one:hover, .image_stack_one:focus,
+.image_stack_two:hover, .image_stack_two:focus, 
+.image_stack_three:hover, .image_stack_three:focus  {
+    animation: growth 700ms ease; 
+}
+
+@keyframes growth {
+    0% { transform: scale(1.0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.0); }
+}
+
+a {
+    text-decoration: none; 
+    color: white; 
+    transition: color 350ms;
+}
+
+a:hover, a:focus {
+    color: #404034;
+}
+
+/* this begins the css for the about page */
+.overall_container_about {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas:
+        "header"
+        "about_main"
+        "footer"; 
+}
+
+.about_main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "love"
+        "left_side_container"
+        "history_container"
+        "about_page_image"
+}
+
+.left_side_container {
+    display: grid; 
+    grid-area: left_side_container;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas:
+    "mission_statement"
+    "three_image_box"
+}
+
+.love {
+    grid-area: love; 
+    background-image: url("../images/love.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; 
+    border-radius: 15px; 
+    margin: 120px 50px 20px 40px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+}
+
+.mission_statement {
+    grid-area: mission_statement; 
+    margin: 40px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+    border-radius: 15px; 
+    padding: 40px; 
+}
+
+.three_image_box {
+    grid-area: three_image_box; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 5px; 
+    margin: 40px;
+    margin-bottom: 20px;
+}
+
+.map {
+    background-image: url("../images/map.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px; 
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+}
+
+.envelopes {
+    background-image: url("../images/envelopes.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px; 
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+}
+
+.confidence {
+    background-image: url("../images/confidence.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px; 
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+}
+
+.history_container {
+    grid-area: history_container; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history {
+    grid-area: history; 
+    height: 1400px; 
+    max-width: 100%; 
+    border-radius: 15px; 
+    margin: 0px 40px;
+    object-fit: contain; 
+    border-radius: 15px; 
+}
+
+.about_page_image {
+    grid-area: about_page_image; 
+    background-image: url("../images/bee_well.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px; 
+    border-radius: 15px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+    margin: 40px;
+}
+
+/* this begins the css for the order page */
+
+.overall_container_order {
+    margin-top: 100px; 
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas:
+        "header"
+        "order_image"
+        "order_main"
+        "prices"
+        "footer"; 
+}
+
+.order_image {
+    grid-area: order_image;  
+    background-image: url("../images/order_image.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; 
+    border-radius: 15px; 
+    margin: 20px; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+}
+
+.order_main {
+    grid-area: order_main; 
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-template-areas:
+        "how_to_order"
+        "step_one"
+        "step_two"
+        "step_three"
+        "step_four"
+        "step_five";
+    margin: 20px 50px; 
+    background-color: #f0e4da;
+    border-radius: 15px; 
+    color: #3a2e23;
+    border: solid #956a46 2px; 
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+}
+
+.how_to_order {
+    grid-area: how_to_order;
+    text-align: center; 
+}
+
+.step_one {
+    grid-area: step_one;
+    text-align: center; 
+}
+
+.step_two {
+    grid-area: step_two;
+    text-align: center; 
+}
+
+.step_three {
+    grid-area: step_three;
+    text-align: center; 
+}
+
+.step_four {
+    grid-area: step_four; 
+    text-align: center; 
+}
+
+.step_five {
+    grid-area: step_five; 
+    text-align: center; 
+}
+
+.prices {
+    margin: 20px 50px; 
+    background-color: #f0e4da;
+    border-radius: 15px; 
+    color: #3a2e23;
+    border: solid #956a46 2px; 
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+    text-align: center; 
+}
+
+footer {
+    grid-area: footer; 
+    width: 100%; 
+    display: inline-flex; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: #B7B7A4; 
+    text-align: center; 
+    align-items: center; 
+    justify-content: center; 
+    box-sizing: border-box; 
+}
+
+.icon {
+    height: 30px; 
+    padding: 10px; 
+    fill: #ffffff;
+    transition: fill 350ms ease;
+    padding: 10px 20px;  
+}
+
+.icon:hover, .icon:focus {
+    fill: #404034;
+}
+
+.tiktok, .etsy {
+    height: 25px; 
+}
+
+h2 {
+    font-size: 30px; 
+}
+
+@media screen and (min-width: 768px) {
+    .overall_container_index {
+        display: grid;
+        grid-template-columns: auto; 
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+            "header"
+            "main_image_one"
+            "main"
+            "footer";
+    }
+
+    .index_main {
+        margin: 0px 100px; 
+        grid-area: main; 
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto;
+        grid-template-areas:
+            "small_description_box image_stack_box"
+            "reviews_image image_stack_box"
+            "gallery_title gallery_title"
+            "gallery gallery";
+    }
+
+    .main_image_one {
+        grid-area: main_image_one; 
+        background-image: url("../images/desktop_banner.jpeg");
+        height: 290px; 
+    }
+
+    .image_stack_box {
+        display: grid; 
+        grid-area: image_stack_box; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        grid-template-areas: 
+            "image_stack_one"
+            "image_stack_two"
+            "image_stack_three"; 
+        padding: 20px; 
+        padding-bottom: 10px; 
+    }
+
+    .reviews_image {
+        grid-area: reviews_image;
+        object-fit: contain; 
+        height: 300px; 
+    }
+
+    .gallery_title {
+        padding-top: 40px; 
+        border: none; 
+        padding-bottom: 0px; 
+    }
+
+    .love {
+        margin-bottom: 10px; 
+    }
+
+    .about_main {
+        margin: 0px 100px; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "left_side_container love"
+            "left_side_container history_container"
+            "left_side_container about_page_image"
+    }
+
+    .left_side_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "mission_statement"
+            "three_image_box"
+    }
+
+    .mission_statement {
+        margin-top: 120px; 
+    }
+
+    .three_image_box {
+        min-height: 100px; 
+        gap: 60px; 
+    }
+
+    .map {
+        min-height: 200px; 
+        max-height: 400px; 
+    }
+    
+    .envelopes {
+        min-height: 200px; 
+        max-height: 400px; 
+    }
+    
+    .confidence {
+        min-height: 200px; 
+        max-height: 400px; 
+    }
+
+    .history {
+        margin-top: 20px; 
+    }
+
+    .about_page_image {
+        margin-top: 10px; 
+    }
+}
+/* i added in this media query to avoid text getting cut off in the "how to order" section. there was
+no way for it to get compressed without creating a scroll bar/distortion, so i decided to keep the mobile view longer
+for better functionality for this page! 1024 is ideal, but 1050 is when the instructions looked the most optimal. */
+@media screen and (min-width: 1050px) {
+    
+    .order_image {
+        margin-left: 100px; 
+        margin-right: 100px; 
+        height: 400px; 
+        max-width: 100%;
+        overflow: hidden; 
+    }
+
+    .order_main {
+        grid-area: order_main; 
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto; 
+        grid-template-areas:
+            "how_to_order how_to_order how_to_order how_to_order how_to_order"
+            "step_one step_two step_three step_four step_five"
+            "prices prices prices prices prices";
+            padding-bottom: 40px; 
+            margin: 20px 200px; 
+    }
+
+    .prices {
+        grid-area: prices; 
+        margin: 20px 280px; 
+        padding: 20px 50px;
+    }
+}
+
