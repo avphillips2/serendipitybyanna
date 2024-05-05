@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 body {
     font-family: "Sanchez", serif;
     font-weight: 400;
@@ -43,7 +49,7 @@ p, h1, h2, h3 {
     grid-template-rows: auto; 
     background-color: white; 
     grid-template-areas:
-        "small_description"
+        "small_description_box"
         "reviews_image"
         "gallery_title"
         "gallery"
@@ -63,25 +69,29 @@ p, h1, h2, h3 {
 }
 
 .small_description_box {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    grid-area: small_description_box; 
+    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
+    margin: 10px 28px; 
+    border-radius: 15px; 
 }
 
 .small_description {
-    grid-area: small_description; 
     color: #3a2e23;
     padding: 40px; 
     margin: 10px 28px; 
     border-radius: 15px; 
-    box-shadow: 0px 0px 10px rgb(224, 224, 224); 
     text-align: center; 
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .reviews_image_box {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin: 20px 28px;
 }
 
 .reviews_image {
@@ -91,7 +101,6 @@ p, h1, h2, h3 {
     width: 100%;
     height: 300px; 
     border-radius: 15px; 
-    margin: 20px 30px; 
     box-shadow: 0px 0px 10px rgb(224, 224, 224);  
 }
 
@@ -154,7 +163,7 @@ p, h1, h2, h3 {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 200px; 
+    height: 200px; 
     margin-bottom: 20px;
     border-radius: 15px;     
     box-shadow: 0px 0px 10px rgb(224, 224, 224);  
@@ -311,7 +320,7 @@ a:hover, a:focus {
 
 .history {
     grid-area: history; 
-    height: 1400px; 
+    height: 90%; 
     max-width: 100%; 
     border-radius: 15px; 
     margin: 0px 40px;
@@ -434,7 +443,7 @@ footer {
 }
 
 .icon {
-    height: 30px; 
+    height: 50px; 
     padding: 10px; 
     fill: #ffffff;
     transition: fill 350ms ease;
@@ -446,7 +455,7 @@ footer {
 }
 
 .tiktok, .etsy {
-    height: 25px; 
+    height: 45px; 
 }
 
 h2 {
@@ -511,6 +520,8 @@ h2 {
 
     .love {
         margin-bottom: 10px; 
+        height: auto; 
+        min-height: 300px; 
     }
 
     .about_main {
@@ -563,6 +574,8 @@ h2 {
 
     .about_page_image {
         margin-top: 10px; 
+        height: auto; 
+        min-height: 300px; 
     }
 }
 /* i added in this media query to avoid text getting cut off in the "how to order" section. there was
